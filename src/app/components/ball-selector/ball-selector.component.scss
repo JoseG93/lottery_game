@@ -1,0 +1,29 @@
+.title {
+    margin: 2%;
+}
+.balls-container {
+    margin: 2%;
+    text-align: center;
+}
+.ball-container {
+    margin: 1px;
+    display: inline-block;
+}
+.ball {
+    height: 2em;
+    width: 2em;
+    border-radius: 100%;
+    display: inline-block;
+}
+.ball-selected {
+    height: 2em;
+    width: 2em;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: grey;
+    color: grey;
+}
+.clear {
+    margin: 2%;
+    text-align: center;
+}

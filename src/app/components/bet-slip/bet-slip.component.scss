@@ -1,0 +1,35 @@
+.selection {
+    text-align: center;
+}
+.set-bet {
+    margin: 2%;
+    text-align: center;
+}
+.total-amount {
+    margin: 2%;
+    text-align: center;
+}
+.place-bet {
+    margin: 2%;
+    text-align: center;
+}
+.result {
+    text-align: center;
+}
+.ball-container {
+    margin: 1px;
+    display: inline-block;
+}
+.ball {
+    height: 2em;
+    width: 2em;
+    border-radius: 100%;
+    display: inline-block;
+}
+.winner-ball {
+    height: 2em;
+    width: 2em;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: gold;
+}

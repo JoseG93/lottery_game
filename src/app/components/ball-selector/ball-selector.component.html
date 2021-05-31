@@ -1,0 +1,21 @@
+<div *ngIf="!showResult">
+    <div class="title">
+        <h3>
+            <strong>Numbers</strong>
+        </h3>
+    </div>
+    <div class="balls-container">
+        <div *ngFor="let ball of balls; index as i" 
+             class="ball"  
+             (click)="ballSelection(ball, i)" 
+             [ngClass]="ball.selected ? 'ball-selected' : 'ball'"
+             [style.background]="!ball.selected ? ball.color : null"
+        >
+            <strong>{{ ball.number }}</strong>
+        </div>
+    </div>
+    <div class="clear">
+        <button (click)="clearSelection()">Clear selection</button>
+    </div>
+</div>
+<app-bet-slip [ballSelected]="ballSelected" [balls]="balls"></app-bet-slip>

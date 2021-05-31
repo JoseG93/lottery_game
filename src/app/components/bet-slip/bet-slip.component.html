@@ -1,0 +1,41 @@
+<div>
+    <div class="selection">
+        <div class="ball-container">
+            <div *ngIf="ballSelected"
+                 class="ball"
+                 [style.background]="ballSelected.color">
+                {{ ballSelected.number }}
+            </div>
+        </div>
+    </div>
+    <div class="set-bet">
+        <div style="display: inline-block;">
+            <h4><strong>5x</strong></h4>
+        </div>
+        <input type="number" [(ngModel)]="userAmount" />
+        <button (click)="setAmount()">Ok</button>
+    </div>
+    <div class="total-amount">
+        <h4>Total bet: {{ totalAmount }}€</h4>
+    </div>
+    <div class="place-bet">
+        <button (click)="placeBet()" 
+                [disabled]="ballSelected === null || totalAmount === null"
+        >
+            Place bet
+        </button>
+    </div>
+    <div class="result" *ngIf="showResult">
+        <h3>
+            <strong>Result</strong>
+        </h3>
+        <div class="ball-container">
+            <div class="winner-ball">
+                {{ result.winnerBall }}
+            </div>
+        </div>
+        <h4>
+            <strong [style.color]="result.statusColor">{{ result.text }}</strong>
+        </h4>
+    </div>
+</div>
